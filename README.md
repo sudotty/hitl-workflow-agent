@@ -59,6 +59,8 @@ The first demo should show that the workflow is concrete and easy to inspect.
 
 ## Repository documents
 
+- [Architecture](docs/architecture.md)
+- [Data Model](docs/data-model.md)
 - [Roadmap](docs/roadmap.md)
 - [Demo Positioning](docs/demo-positioning.md)
 - [Showcase Plan](docs/showcase-plan.md)
