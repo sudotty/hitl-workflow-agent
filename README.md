@@ -1,77 +1,86 @@
 # Human-in-the-loop Workflow Agent
 
-A human-in-the-loop workflow agent for invoice reconciliation, policy checks, risk scoring, tool dry-runs, and auditable approvals.
+A reviewable workflow agent for structured business operations: extract facts, check rules, prepare a summary, ask for human review, and keep a clear record.
 
-This project focuses on a realistic enterprise pattern: AI prepares the work, but humans approve sensitive actions.
+This project focuses on a realistic enterprise pattern: AI prepares the work, but humans keep the final decision visible and controlled.
 
 ## Why this project exists
 
-Most companies do not want fully autonomous agents making financial, operational, or permission-changing decisions. They want agents that can reduce manual work while preserving control, auditability, and accountability.
+Many business workflows are repetitive but still require judgment. Requests often arrive through documents, spreadsheets, emails, or internal systems. The useful agent is not the one that hides the decision. The useful agent is the one that prepares the case clearly.
 
 The goal is not full autonomy. The goal is safe delegation.
 
+A practical workflow agent should answer:
+
+1. What request came in?
+2. What facts were extracted?
+3. Which rules were checked?
+4. What does the system recommend?
+5. What should the human reviewer decide?
+6. What record remains after the decision?
+
+## Product shape
+
+The product should feel like a small work review console.
+
+Core screens:
+
+| Screen | What it shows |
+|---|---|
+| Request Intake | Original request and attached sample data |
+| Extracted Fields | Structured fields with confidence or notes |
+| Rule Checks | Matched rules, missing fields, and warnings |
+| Summary View | Short explanation of what the system understood |
+| Review Screen | Approve, reject, or request changes |
+| Record View | Final state, reviewer action, and timeline |
+
 ## MVP target
 
-Build an invoice reconciliation and payment approval workflow where the agent extracts facts, checks policy, scores risk, previews the action, pauses for human review, and records an audit trail.
+Build a sample business workflow where the agent extracts facts, checks rules, prepares a review summary, pauses for human decision, and records the result.
 
 ```text
-invoice -> structured extraction -> validation -> policy checks -> risk score -> preview -> approval -> mock execution -> audit trail
+request -> fields -> rule checks -> summary -> review -> final record
 ```
+
+The first demo should show that the workflow is concrete and easy to inspect.
 
 ## Prioritized roadmap
 
 | Priority | Workstream | Outcome |
 |---|---|---|
-| P0 / MVP | Invoice workflow definition | The business process is concrete and understandable |
-| P0 / MVP | Structured extraction and validation | The agent works with facts, not loose text |
-| P0 / MVP | Policy checks and risk scoring | The system explains why a case needs review |
-| P1 | Preview and approval UI | Humans can approve, reject, or request changes |
-| P1 | Mock ERP/payment execution and audit | The workflow closes the loop without touching real systems |
-| P1 | Workflow evaluation cases | Business rules can be regression-tested |
-| P2 | Interview notes and demo | The project is easy to explain to operations and AI teams |
+| P0 / MVP | Workflow definition | The business process is concrete and understandable |
+| P0 / MVP | Structured extraction | The system works with facts, not loose text |
+| P0 / MVP | Rule checks and summary | The reviewer can understand why attention is needed |
+| P0 / MVP | Showcase path | One demo path from request intake to final record |
+| P1 | Review UI | Humans can approve, reject, or request changes |
+| P1 | Mock business-system action | The workflow can close the loop without real systems |
+| P1 | Workflow evaluation cases | Business rules can be checked repeatedly |
+| P2 | Interview notes and demo script | The project is easy to explain to operations and AI teams |
 
-## Demo use case
+## Repository documents
 
-Vendor invoice reconciliation and payment approval.
+- [Roadmap](docs/roadmap.md)
+- [Demo Positioning](docs/demo-positioning.md)
+- [Showcase Plan](docs/showcase-plan.md)
+- [Design Gallery](docs/design-gallery.md)
 
-```text
-Invoice / payment request
-  ↓
-Extract structured fields
-  ↓
-Validate vendor and invoice data
-  ↓
-Check policies: amount threshold, duplicate payment, missing PO
-  ↓
-Score risk
-  ↓
-Prepare action preview
-  ↓
-Pause for human approval
-  ↓
-Execute mock ERP / payment action
-  ↓
-Write audit trail
-```
+## Demo narrative
 
-## Core features
+1. Load a sample business request.
+2. Show extracted fields.
+3. Show rule checks.
+4. Generate a clear summary.
+5. Send the case to review.
+6. Show the final record.
 
-| Feature | Purpose |
-|---|---|
-| Invoice intake | Accept sample invoice/payment requests |
-| Structured extraction | Extract vendor, amount, invoice id, due date, purchase order number |
-| Policy checks | Enforce business rules before execution |
-| Risk scoring | Low / medium / high risk classification |
-| Action plan | Explain what the agent wants to do |
-| Preview mode | Preview external system changes |
-| Approval gate | Approve, reject, or request changes |
-| Workflow state | Pause and resume execution |
-| Audit trail | Record facts, rules, decisions, and external actions |
+## What this project demonstrates
 
-## Interview value
-
-This project helps explain how AI agents enter real business workflows, where humans should remain in the loop, and how auditability makes automation trustworthy.
+- Business workflow understanding.
+- Structured extraction and decision preparation.
+- Human-centered automation rather than blind autonomy.
+- Clear review and record design.
+- Strong fit for AI automation, internal tools, and operations roles.
 
 ## Status
 
-Planning and scaffolding. Issues are used as the implementation roadmap.
+Planning and scaffolding. Issues are used as the implementation roadmap. The next build target is the P0 MVP showcase path.
