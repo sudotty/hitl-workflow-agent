@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f7f8fa"/>
+  <rect x="60" y="60" width="1080" height="600" rx="24" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="96" y="120" font-family="Arial" font-size="34" font-weight="700" fill="#24292f">Human-in-the-loop Workflow Agent</text>
+  <text x="96" y="160" font-family="Arial" font-size="18" fill="#57606a">Request → Fields → Rule Checks → Summary → Review → Record</text>
+  <g font-family="Arial" font-size="18" fill="#24292f">
+    <rect x="96" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="132" y="272">Request</text>
+    <rect x="296" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="346" y="272">Fields</text>
+    <rect x="496" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="548" y="272">Rules</text>
+    <rect x="696" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="742" y="272">Review</text>
+    <rect x="896" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="940" y="272">Record</text>
+  </g>
+  <text x="96" y="410" font-family="Arial" font-size="22" font-weight="700" fill="#24292f">Showcase value</text>
+  <text x="96" y="450" font-family="Arial" font-size="18" fill="#57606a">Prepare structured business work while keeping the review path visible.</text>
+  <text x="96" y="500" font-family="Arial" font-size="18" fill="#57606a">Strong demo point: the system prepares work without hiding the decision process.</text>
+</svg>
